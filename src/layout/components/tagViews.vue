@@ -98,9 +98,7 @@ const closeTag = (item, i) => {
   if (index !== -1) {
     cacheNames.value.splice(index,1)
   }
-  setTimeout(() => {
-    routeList.value.splice(i, 1)
-  }, 10);
+  routeList.value.splice(i, 1)
   if (item.title !== activeMenu.value) return;
   router.push(routeList.value[i-1].fullpath)
 }
