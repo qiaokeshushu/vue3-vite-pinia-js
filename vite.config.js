@@ -7,8 +7,11 @@ import postCssPxToRem from 'postcss-pxtorem'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
-  // 例如 https://www.ruoyi.vip/。如果应用被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.ruoyi.vip/admin/，则设置 base 为 /admin。
+  // 例如 https://www.baidu/。如果应用被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.baidu/admin/，则设置 base 为 /admin。
   base: '/',
+  build: {
+    sourcemap: false,
+  },
   server: {
     port: 3000,
     host: true,
